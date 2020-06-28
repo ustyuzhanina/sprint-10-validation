@@ -20,21 +20,21 @@
                 <h3>Форма регистрации</h3>
                 <fieldset class="form__fieldset">
                     <div class="form__field">
-                        <input class="form__input" type="text" name="name" pattern="" placeholder="Имя" required />
+                        <input class="form__input" type="text" name="name" pattern="[А-ЯЁ][а-яё]*-?([А-ЯЁ][а-яё]*)?" placeholder="Имя" required minlength="2" maxlength="20"/>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="email" pattern="" placeholder="E-Mail" required />
+                        <input class="form__input" type="text" name="email" pattern="([\w\d]*-?[\w\d]*)@([\w\d]*-?[\w\d]*\.)?([\w\d]*-?[\w\d]*\.)\w{2,3}" placeholder="E-Mail" required />
                         <span class="form__error">e-mail в формате: students-yandex@yandex.ru</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="" minlength="" maxlength="18"  required/>
+                        <input class="form__input" type="text" name="tel" placeholder="Телефон" pattern="((\+7)|(8))\s?\(?(\d{3})\)?\s?-?(\d{3})\s?-?(\d{2})\s?-?(\d{2})" minlength="11" maxlength="18"  required/>
                         <span class="form__error">Недопустимый формат номера</span>
                     </div>
                     <div class="form__field">
-                        <input class="form__input" type="text" name="url" pattern="" placeholder="Ваш сайт" required/>
+                        <input class="form__input" type="text" name="url" pattern="((http:\/\/)|(https:\/\/))(www\.)?((\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}|([\d\w-]+\.\w{2,3}))(:\d{2,5})?)\/?((\w*(\/|#?$))*)?" placeholder="Ваш сайт" required/>
                         <span class="form__error">URL в формате: http://mysite.ru</span>
                     </div>
-                    <button class="form__button" type="text">Отправить</button>
+                    <button class="form__button" type="submit">Отправить</button>
                 </fieldset>
             </form>
         </div>
